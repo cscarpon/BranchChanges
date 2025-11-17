@@ -1,0 +1,26 @@
+name: changeDetection
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # --- Core scientific stack ---
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+
+  # --- LiDAR / point cloud IO ---
+  - open3d>=0.18
+  - laspy>=2.5
+  - lazrs>=0.6     # enables .laz read/write for laspy
+
+  # --- Optional: plotting / visualization ---
+  - matplotlib
+
+  # --- I/O and utilities ---
+  - tqdm
+  - pip
+
+  # --- pip-only installs (fallback for new open3d releases, etc.) ---
+  - pip:
+      - open3d
